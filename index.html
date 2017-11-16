@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<title>catalog</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+      margin: 50px;
+    }
+    .x{
+        float: right;
+        margin-top:40px;
+       margin-right: 10px;
+    }
+html{
+  margin: 40px auto;
+}
+.btn-search {
+    background: #424242;
+    border-radius: 0;
+    color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1c1c1c;
+  }
+  .btn-search:link, .btn-search:visited {
+    color: #fff;
+  }
+  .btn-search:active, .btn-search:hover {
+    background: #1c1c1c;
+    color: #fff;
+  }
+
+</style>
+</head>
+<body>
+  <div class="container" style="width: 700px !important;">
+<div class="input-group">
+  <input type="text" class="form-control y" placeholder="Search for Product by Name...">
+      <span class="input-group-btn">
+        <button class="btn btn-search" id="search" type="button"><i class="fa fa-search fa-fw"></i> Search</button>
+      </span>
+</div>
+</div>
+<div class="bs-example">
+    <table class="table" style="visibility: hidden">
+        <thead>
+            <tr>
+                <th>Product-Name</th>
+                <th>Model</th>
+                <th>Ram Size</th>
+                <th>HardDisk</th>
+                <th>os</th>
+                <th>Processor</th>
+                <th>Built-On</th>
+                <th>Display-Size</th>
+                <th>Make</th>
+            </tr>
+        </thead>
+        <tbody id="tablebody">
+        </tbody>
+    </table>
+</div>
+<script type="text/javascript">
+  $(document).on('click','#search',function(){
+    alert('hello');
+    var y = $('.y').val();
+  
+
+  });
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="delete.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAD9xFW0fzAUYbeTOe-f8T5LXK2L7IpMek",
+    authDomain: "firstproject-e41ea.firebaseapp.com",
+    databaseURL: "https://firstproject-e41ea.firebaseio.com",
+    projectId: "firstproject-e41ea",
+    storageBucket: "firstproject-e41ea.appspot.com",
+    messagingSenderId: "938903289444"
+  };
+  firebase.initializeApp(config);
+</script>
+</body>
+</html>                            

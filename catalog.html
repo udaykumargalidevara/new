@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<title>catalog</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+        margin: 50px;
+    }
+    .x{
+        float: right;
+        margin-top:40px;
+       margin-right: 10px;
+    }
+</style>
+</head>
+<body>
+<button type="button" class="btn btn-info btn-lg x" id="bu" data-toggle="modal" data-target="#myModal">Add Product</button>
+<!--model-->
+<!--edit model-->
+<div class="modal fade" id="myedit" role="dialog">
+    <div class="modal-dialog">
+     
+     <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Edit Product Details</h4>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal" id="editform">
+        editing
+
+          </form>
+        </div>
+        
+      </div>
+     
+      
+    </div>
+  </div>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add product</h4>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal" id="myform">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="product">ProductName:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="pn" placeholder="Enter Product Name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="model">Model:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="model" placeholder="Enter Model">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="ram">Ram-Size:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="ram" placeholder="Enter Ram Size">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="hd">HardDisk:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="hd" placeholder="Enter HardDisk">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="os">Operating System:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="os" placeholder="Enter Operating System">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="Processor">Processor:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="processor" placeholder="Enter Processor">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="bo">Built-on:</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="bo" placeholder="Enter Built-On Date">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="display">Display-Size:</label>
+    <div class="col-sm-10"> 
+      <input type="text" class="form-control" id="displaysize" placeholder="Enter Display-Size">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="make">Make:</label>
+    <div class="col-sm-10"> 
+      <input type="text" class="form-control" id="make" placeholder="Enter Make">
+    </div>
+  </div>
+  
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+      <button id="submit" class="btn btn-default">Add to Catalog</button>
+    </div>
+  </div>
+</form>
+
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+<div class="bs-example">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product-Name</th>
+                <th>Model</th>
+                <th>Ram Size</th>
+                <th>HardDisk</th>
+                <th>os</th>
+                <th>Processor</th>
+                <th>Built-On</th>
+                <th>Display-Size</th>
+                <th>Make</th>
+            </tr>
+        </thead>
+        <tbody id="tablebody">
+        </tbody>
+    </table>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="delete.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAD9xFW0fzAUYbeTOe-f8T5LXK2L7IpMek",
+    authDomain: "firstproject-e41ea.firebaseapp.com",
+    databaseURL: "https://firstproject-e41ea.firebaseio.com",
+    projectId: "firstproject-e41ea",
+    storageBucket: "firstproject-e41ea.appspot.com",
+    messagingSenderId: "938903289444"
+  };
+  firebase.initializeApp(config);
+</script>
+</body>
+</html>                            
